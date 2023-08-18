@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <math.h>
 
 int verificarNumeroPrimo(int n)
@@ -18,10 +19,9 @@ int verificarNumeroPrimo(int n)
 
 int main(int argc,char*argv[])
 {
-    int numero;
+    int numero=45;
 
-    printf("Digite o numero: ");
-    scanf("%d",&numero);
+    numero =atoi(argv[1]);
 
     if(verificarNumeroPrimo(numero)>=1){
         printf("eh primo");
