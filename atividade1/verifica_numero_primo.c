@@ -19,7 +19,7 @@ int verificarNumeroPrimo(int n)
 
 int main(int argc,char*argv[])
 {
-    int numero=45;
+    int numero;
 
     numero =atoi(argv[1]);
 
