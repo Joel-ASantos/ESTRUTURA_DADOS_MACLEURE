@@ -11,7 +11,7 @@
 int EncontrarString(const char *vetor[],const char *busca,int lenght){
     int valor=0,i;
   
-    for(i=0;i<lenght;i++){
+    for(i = 0;i < lenght;i++){
         if(strcmp(vetor[i],busca) == 0){  
             valor++;
             printf("Saida: %d",valor);    
