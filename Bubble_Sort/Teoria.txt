@@ -1,0 +1,4 @@
+O algoritmo bubble sort, serve para a ordenação de valores
+ou dados.
+
+A utilidade desse algoritmo pode variar.
