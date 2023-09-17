@@ -1,0 +1,1 @@
+void Organizar_valores(int vetor[],int y);
