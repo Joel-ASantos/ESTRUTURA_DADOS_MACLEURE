@@ -13,6 +13,8 @@ Saída: 17 20 26 31 44 54 55 77 93
 OBS: os números são passados como argumentos na chamada do programa (argv);
 */
 
+//Inserir dez valores
+
 void impressao_valores(int array[], int n){
     for(int i = 0;i < n;i++){
         printf("%d\t",array[i]);
@@ -22,7 +24,7 @@ void impressao_valores(int array[], int n){
 int main(int argc,char *argv[]){
     int numeros[10];
     
-    for(int i = 0;i < 10;i++){
+    for(int i = 0;i <= 10;i++){
         numeros[i-1] = strtol(argv[i], NULL, 10);
     }
 
