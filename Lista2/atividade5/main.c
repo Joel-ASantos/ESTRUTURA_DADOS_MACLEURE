@@ -1,6 +1,7 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "bubble_sort.h"
 #define MAX 100
 
 /*
@@ -27,30 +28,38 @@ OBS: o nome do arquivo é passado como argumento na chamada do programa (argv);*
 int main(int argc, char *argv[]){
     
     //Arquivo para escrever
-    char String[MAX];
+    char String[3][MAX];
     int cont = 0;
 
     FILE *file;
-    file = fopen(argv[1],"w");
+    file = fopen(argv[1],"r");
 
     if(file == NULL){
         printf("Erro! Arquivo nao encontrado.");
         return 1;
     }
 
-    while(fscanf(file,"%s",&String[MAX]) != EOF){
+    while(fscanf(file,"%s",&String[cont]) != EOF){
         cont++;
     }
     fclose(file);
 
-    /**
-     * @brief Atividade 5(Lista 2): Estrutura de dados
-     * 
-     * Status: Incompleto;
-     * O que falta?
-     * 
-     * Falta o algoritmo bubble sort,
-     * a saida .txt, e a leitura.
-     */
+    //Jogando valores na função
+    bubble_sort(String, cont);
+
+    //Gerando arquivo.txt
+
+    FILE *arquivo2;
+    arquivo2 = fopen("arquivo_ordenado.txt","w");
+
+    if(arquivo2 == NULL){
+        printf("arquivo nao encontrado!");
+        return 1;
+    }
+
+    for(int i = 0; i < cont; i++){
+        fprintf(arquivo2,"%s\t",String[i]);
+    }
+    fclose(arquivo2);
     return 0;
 }
