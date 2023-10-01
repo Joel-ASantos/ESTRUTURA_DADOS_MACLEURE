@@ -7,7 +7,6 @@ struct Fila{
     struct Objeto* final;
     int quantidade_objetos;
 };
-
 struct Fila* fila();
 void enfileirar(struct Objeto* o,struct Fila* ptr_F);
 struct Objeto* desenfileirar(struct Fila* ptr_F);

@@ -5,18 +5,15 @@
 int main(int argc, char *argv[]){
     
     struct Objeto o1;
-    Objeto o1;
     o1.valor = 'A';
 
     struct Objeto o2;
-    Objeto o2;
     o1.valor = 'B';
 
     struct Objeto o3;
-    Objeto o3;
     o1.valor = 'C';
 
-    struct File* ptr_F = fila();
+    struct Fila* ptr_F = fila();
 
     
     enfileirar(&o1,ptr_F);
