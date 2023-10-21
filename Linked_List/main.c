@@ -11,7 +11,18 @@ int main(int argc, char *argv[]){
     lista_inserir_no(n0,n1);
     lista_inserir_no(n0,n2);
 
+    No* Ncopia = lista_copiar(n0);
+
+    lista_imprimir(n0);
+    printf("\n");
+    lista_imprimir(Ncopia);
+    
+    lista_concatenar(n0,Ncopia);
+    printf("\n");
     lista_imprimir(n0);
 
+    printf("\nQtd. nos: %d",lista_tamanho(n0));
+
+    lista_Liberar(n0);
     return 0;
 }

@@ -24,3 +24,24 @@ void lista_imprimir(No* H){
         lista_imprimir(H->proximo_no);
     }
 }
+No* lista_copiar(No* H){
+    if(H != NULL){
+        return no(H->valor, lista_copiar(H->proximo_no));
+    }
+    return NULL;
+}
+void lista_concatenar(No* H, No* Hc){
+    lista_inserir_no(H,Hc);
+}
+void lista_Liberar(No* H){
+    if(H != NULL){
+        lista_Liberar(H->proximo_no);
+        free(H);
+    }
+}
+int lista_tamanho(No*H){
+    if(H != NULL){
+        return 1 + lista_tamanho(H->proximo_no);
+    }
+    return 0;
+}
