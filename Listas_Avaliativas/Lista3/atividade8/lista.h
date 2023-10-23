@@ -11,3 +11,4 @@ void lista_concatenar(No* H, No* Hc);
 void lista_liberar(No* H);
 int lista_tamanho(No* H);
 int lista_verificar_existencia(No* H,int valor_buscar);
+int lista_verificar_ocorrencia(No* H,int qtd);

@@ -24,6 +24,9 @@ int main(int argc,char *argv[]){
     lista_verificar_existencia(n0,23);
     printf("\n");
 
+    printf("\nQtd. de ocorrencias: %d",lista_verificar_ocorrencia(n0,0));
+    printf("\n");
+
     printf("\nQtd. nos: %d",lista_tamanho(n0));
     lista_liberar(n0);
     return 0;

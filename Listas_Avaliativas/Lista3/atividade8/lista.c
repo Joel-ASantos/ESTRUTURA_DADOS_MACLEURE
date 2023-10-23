@@ -57,3 +57,10 @@ int lista_verificar_existencia(No* H,int valor_buscar){
     printf("\nO valor nao existe no noh");
     return 0;
 }
+int lista_verificar_ocorrencia(No* H,int qtd){
+    if(H != NULL){
+        qtd++;
+        lista_verificar_ocorrencia(H->proximo_no,qtd);   
+    }
+    return 0;
+}
