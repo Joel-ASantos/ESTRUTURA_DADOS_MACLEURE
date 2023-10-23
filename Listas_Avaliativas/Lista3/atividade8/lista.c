@@ -47,8 +47,13 @@ int lista_tamanho(No* H){
 }
 int lista_verificar_existencia(No* H,int valor_buscar){
     if(H != NULL){
-        if(valor_buscar != H->valor){
-            lista_verificar_existencia(H->proximo_no, valor_buscar);
+        if(valor_buscar == H->valor){
+            printf("\nO valor existe no noh");
+            return 1;
+        }else{
+            return lista_verificar_existencia(H->proximo_no,valor_buscar);           
         }
     }
+    printf("\nO valor nao existe no noh");
+    return 0;
 }

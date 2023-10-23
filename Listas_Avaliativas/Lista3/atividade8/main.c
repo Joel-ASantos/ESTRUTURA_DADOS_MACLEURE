@@ -21,11 +21,10 @@ int main(int argc,char *argv[]){
     printf("\n");
     lista_imprimir(n0);
 
+    lista_verificar_existencia(n0,23);
+    printf("\n");
+
     printf("\nQtd. nos: %d",lista_tamanho(n0));
     lista_liberar(n0);
-
-    lista_verificar_existencia(n0,12);
-    printf("\n");
-    lista_imprimir(n0);
     return 0;
 }
