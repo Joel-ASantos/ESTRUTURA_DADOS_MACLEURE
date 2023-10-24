@@ -4,6 +4,8 @@
 
 int main(int argc,char *argv[]){
     
+    int qtd;
+
     No* n0 = no(12,NULL);
     No* n1 = no(23,NULL);
     No* n2 = no(5,NULL);
@@ -24,7 +26,7 @@ int main(int argc,char *argv[]){
     lista_verificar_existencia(n0,23);
     printf("\n");
 
-    printf("\nQtd. de ocorrencias: %d",lista_verificar_ocorrencia(n0,0));
+    lista_verificar_ocorrencia(n0,qtd);
     printf("\n");
 
     printf("\nQtd. nos: %d",lista_tamanho(n0));
