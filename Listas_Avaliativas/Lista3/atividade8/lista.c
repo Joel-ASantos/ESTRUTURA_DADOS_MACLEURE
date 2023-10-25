@@ -65,15 +65,15 @@ int lista_verificar_existencia(No* H,int valor_buscar){
     return 0;
 }
 
-int lista_verificar_ocorrencia(No* H,int val_buscar){ //Necessita de Ajustes 
-    int ocorrencia;
-
+int lista_verificar_ocorrencia(No* H,int val_buscar){  
     if(H != NULL){
-        if(ocorrencia != val_buscar){
-            return lista_verificar_ocorrencia(H->proximo_no, ocorrencia + 1);
+        int ocorrencia = lista_verificar_ocorrencia(H->proximo_no,val_buscar);
+
+        if(H->valor == val_buscar){
+            return 1 + ocorrencia;
         }
+        return ocorrencia;
     }
-    printf("\nOcorrencia: %d\n",ocorrencia);
     return 0;
 }
 
