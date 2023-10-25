@@ -16,6 +16,12 @@ typedef struct Lista_Ordenada{
 
 int main(int argc, char *argv[]){
    
+   FILE *file = fopen("1kk_rand_float.csv","r");
+   
+    if(file == NULL){
+        perror("\nFalha ao tentar abrir o arquivo\n");
+        return -1;
+    }
     
    return 0; 
 }

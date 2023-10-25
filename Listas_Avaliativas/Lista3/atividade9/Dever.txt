@@ -1,0 +1,32 @@
+O que a questão pede:
+
+"No seu repositório de atividades, crie uma pasta atvidade9. Implemente uma lista encadeada conforme definido na atividade 8. Adicione a função:
+
+void lista_inserir_no_ordenado(No* L, No* no);
+
+Essa função deve inserir um nó na lista considerando o seu valor, de forma que a lista se mantenha ordenada,
+ sendo o primeiro nó o de menor valor e o último nó o de maior valor.
+
+O nó deve armazenar valores do tipo FLOAT.
+
+No main.c, crie duas listas: lista_nao_ordenada e lista_ordenada.
+
+Leia o arquivo "1kk_rand_float.csv" (anexo) e carregue os números nas duas listas. O arquivo possui um número por linha, no formato "0.00".
+
+Calcule o tempo médio (em segundos) de inserção em cada lista e compare os tempos obtidos.
+ Como solução, poste o link da pasta atividade9 e um comentário descrevendo a observação do experimento.
+
+OBS: para cada número lido no arquivo, devem ser criados 2 nós com o número lido. Cada nó deve ser inserido em uma das listas.
+
+O QUE EU ENTENDI:
+
+Criar uma função chamada void lista_inserir_no_ordenado.
+Ela deve inserir um nó na lista, onde ela deve ser ordenada
+por valor. "Ex: 0,1,2,3,4....n". 
+
+Já no Main, devo criar mais duas listas, uma ordenada e a outra não.
+Carregar o arquivo dado pelo professor, e calcular o tempo médio em segundos.
+Fazendo assim uma comparação entre elas.
+
+Muito provável que a função criada seja usada na lista ordenada, que
+se encontra no Main.
