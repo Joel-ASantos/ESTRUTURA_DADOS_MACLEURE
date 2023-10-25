@@ -79,3 +79,15 @@ void lista_imprimir_inversa(No* H){ //Impressão na ordem inversa: 5,23,12
        printf("%d\t",H->valor);
     }
 }
+
+void lista_inserir_no_i(No* H, int i){
+
+}
+
+void lista_remover_no_i(No* H, int i){
+
+}
+
+void lista_remover_no(No* H, int valor_busca){
+
+}
