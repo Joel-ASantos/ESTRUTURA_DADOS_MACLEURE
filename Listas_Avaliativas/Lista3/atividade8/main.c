@@ -30,6 +30,15 @@ int main(int argc,char *argv[]){
     lista_imprimir_inversa(n0);
     printf("\n");
 
+    lista_inserir_no_i(n0,0,34);
+    printf("\n");
+
+    lista_remover_no_i(n0,0);
+    printf("\n");
+
+    lista_remover_no(n0,23);
+    printf("\n");
+
     printf("\nQtd. nos: %d",lista_tamanho(n0));
     lista_liberar(n0);
     return 0;

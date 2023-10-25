@@ -84,14 +84,39 @@ void lista_imprimir_inversa(No* H){
     }
 }
 
-void lista_inserir_no_i(No* H, int i){
-
+void lista_inserir_no_i(No* H, int i,int value){
+    if(H != NULL){
+        if(i == 0){
+            No* novo_no = no(value,H->proximo_no);
+            H->proximo_no = novo_no;
+        }else{
+            lista_inserir_no_i(H->proximo_no, i - 1,value);
+        }
+    }
 }
 
 void lista_remover_no_i(No* H, int i){
-
+    if(H != NULL){
+        if(i == 0 && H->proximo_no != NULL){
+            No* remover = H->proximo_no;
+            H->proximo_no = H->proximo_no->proximo_no;
+            free(remover); 
+        }else{
+            lista_remover_no_i(H->proximo_no, i - 1);
+        }        
+    }
 }
 
 void lista_remover_no(No* H, int valor_busca){
-
+    if(H != NULL){
+        if(H->proximo_no !=NULL && valor_busca != NULL){
+            if(H->proximo_no->valor == valor_busca){
+                No* remover_no = H->proximo_no;
+                H->proximo_no = H->proximo_no->proximo_no;
+                free(remover_no);
+            }else{
+                lista_remover_no(H->proximo_no,valor_busca);
+            }
+        }
+    }
 }

@@ -15,8 +15,6 @@ int lista_tamanho(No* H);
 int lista_verificar_existencia(No* H,int valor_buscar);
 int lista_verificar_ocorrencia(No* H,int qtd);
 void lista_imprimir_inversa(No* H);
-
-//Funções que faltam Adicionar
-void lista_inserir_no_i(No* H, int i);
+void lista_inserir_no_i(No* H, int i,int value);
 void lista_remover_no_i(No* H, int i);
 void lista_remover_no(No* H, int valor_busca);
