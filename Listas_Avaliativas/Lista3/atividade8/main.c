@@ -29,6 +29,9 @@ int main(int argc,char *argv[]){
     lista_verificar_ocorrencia(n0,qtd);
     printf("\n");
 
+    lista_imprimir_inversa(n0);
+    printf("\n");
+
     printf("\nQtd. nos: %d",lista_tamanho(n0));
     lista_liberar(n0);
     return 0;
