@@ -65,15 +65,19 @@ int lista_verificar_existencia(No* H,int valor_buscar){
     return 0;
 }
 
-int lista_verificar_ocorrencia(No* H,int qtd){ //Retornando Lixo de memoria
+int lista_verificar_ocorrencia(No* H,int val_buscar){ //Necessita de Ajustes 
+    int ocorrencia;
+
     if(H != NULL){
-        return lista_verificar_ocorrencia(H->proximo_no,qtd++);
+        if(ocorrencia != val_buscar){
+            return lista_verificar_ocorrencia(H->proximo_no, ocorrencia + 1);
+        }
     }
-    printf("Qtd. Ocorr: %d",qtd);
-    return qtd;
+    printf("\nOcorrencia: %d\n",ocorrencia);
+    return 0;
 }
 
-void lista_imprimir_inversa(No* H){ //Impressão na ordem inversa: 5,23,12
+void lista_imprimir_inversa(No* H){ 
     if(H != NULL){
        lista_imprimir_inversa(H->proximo_no);
        printf("%d\t",H->valor);
