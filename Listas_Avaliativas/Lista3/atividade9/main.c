@@ -2,6 +2,15 @@
 #include <stdlib.h>
 #include "lista_encadeada.h"
 
+
+void lista_ordenada(node* H){
+        
+}
+
+void lista_nao_ordenada(node* L){
+
+}
+
 int main(int argc, char *argv[]){
     
     //Abrindo arquivo
@@ -13,10 +22,12 @@ int main(int argc, char *argv[]){
     }
 
     //Declarando as cabeças e caldas
-    node* head_H = NULL;
-    node* tail_H = NULL;
-    node* head_Hl = NULL;
-    node* tail_Hl = NULL;
-    
+    node* head_H = NULL; //Cabeça da lista ordenada
+    node* head_Hl = NULL; //Cabeça da lista não ordenada
+
+    //Estruturando as listas
+    lista_ordenada(head_H);
+    lista_nao_ordenadar(head_Hl);
+
    return 0; 
 }
