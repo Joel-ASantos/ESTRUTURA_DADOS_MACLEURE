@@ -10,5 +10,20 @@ node* no(float valores, node* next){
 }
 
 void lista_inserir_no_ordenado(node* L, node* no){
+    node* new_node;
 
+    if(L != NULL){
+        if(L->next == NULL){
+            new_node = L->next;
+            L = new_node;
+        }else{
+            new_node = L;
+
+            while(new_node->next != NULL && new_node->next->valores < no->valores){
+                new_node = new_node->next;
+            }
+            no->next = new_node->next;
+            new_node->next = no;
+        }
+    }
 }
