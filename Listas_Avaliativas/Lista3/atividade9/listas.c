@@ -9,6 +9,6 @@ No* no(float valores,No* proximo){
     return no;
 }
 
-void lista_inserir_no_ordenado(No* L, No* no){
-        
+void lista_inserir_no_ordenado(No* L, No* no){ //Função que deve inserir mais um nó na Lista ordenada no main.
+   
 }
