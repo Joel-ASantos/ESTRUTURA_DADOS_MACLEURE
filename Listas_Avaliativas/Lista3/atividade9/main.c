@@ -1,13 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "listas.h"
-
-
-//Definindo os nos das listas ordenadas e nao ordenadas
-typedef struct node{
-    float valores;
-    struct node* next;
-}node;
+#include "lista_encadeada.h"
 
 int main(int argc, char *argv[]){
     
