@@ -31,6 +31,7 @@ int main(int argc, char *argv[]){
    }while(!feof(file));
    
     fclose(file);
+    
     Lista_imprimir(head_H);
     printf("\n");
     Lista_imprimir(head_Hl);
@@ -60,7 +61,7 @@ int main(int argc, char *argv[]){
         lista_inserir_no_ordenado(head_H, novo_no);
     }
     end = clock();
-    
+
     cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
     printf("Tempo medio de insercao na lista ordenada: %f segundos\n", cpu_time_used);
 
