@@ -5,3 +5,4 @@ typedef struct node{
 
 void lista_inserir_no_ordenado(node* L, node* no);
 void Lista_imprimir(node* H);
+void lista_liberar(node* L);

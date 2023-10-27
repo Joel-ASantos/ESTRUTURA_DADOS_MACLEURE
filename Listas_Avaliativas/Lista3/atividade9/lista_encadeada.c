@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #include "lista_encadeada.h"
 
 node* no(float valores, node* next){
@@ -32,5 +33,12 @@ void Lista_imprimir(node* H){
     if(H != NULL){
         printf("%.2f\n",H->valores);
         Lista_imprimir(H->next);
+    }
+}
+
+void lista_liberar(node* L){
+    if (L != NULL) {
+        lista_liberar(L->next);
+        free(L);
     }
 }
