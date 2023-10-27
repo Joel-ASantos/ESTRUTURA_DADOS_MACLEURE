@@ -17,16 +17,17 @@ int main(int argc, char *argv[]){
     node* head_Hl;
 
    do{
-        fscanf(file,"%.2f",&read);
+        if(fscanf(file,"%.2f",&read) == 1){
 
-        if(cont == 0){
-            head_H = no(read,NULL);
-            head_Hl = no(read,NULL);
-            cont++;
-        }else{
-            lista_inserir_no_ordenado(head_H,no(read,NULL));
+            if(cont == 0){
+                head_H = no(read,NULL);
+                head_Hl = no(read,NULL);
+                cont++;
+            }else{
+                lista_inserir_no_ordenado(head_H,no(read,NULL));
+            }
         }
-   }while(!EOF);
+   }while(!feof(file));
    
     fclose(file);
     Lista_imprimir(head_H);

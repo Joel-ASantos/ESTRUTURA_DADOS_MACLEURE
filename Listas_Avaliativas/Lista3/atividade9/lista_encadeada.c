@@ -30,7 +30,7 @@ void lista_inserir_no_ordenado(node* L, node* no){
 
 void Lista_imprimir(node* H){
     if(H != NULL){
-        printf("%d\t",H->valores);
+        printf("%.2f\n",H->valores);
         Lista_imprimir(H->next);
     }
 }
