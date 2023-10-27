@@ -2,18 +2,10 @@
 #include <stdlib.h>
 #include "lista_encadeada.h"
 
+int main(int argc, char *argv[]){    
+    float read;
+    int cont = 0;
 
-void lista_ordenada(node* H){
-        
-}
-
-void lista_nao_ordenada(node* L){
-
-}
-
-int main(int argc, char *argv[]){
-    
-    //Abrindo arquivo
     FILE* file = fopen("1kk_rand_float.csv","r");
 
     if(file == NULL){
@@ -21,13 +13,24 @@ int main(int argc, char *argv[]){
         return 1;
     }
 
-    //Declarando as cabeças e caldas
-    node* head_H = NULL; //Cabeça da lista ordenada
-    node* head_Hl = NULL; //Cabeça da lista não ordenada
+    node* head_H;
+    node* head_Hl;
 
-    //Estruturando as listas
-    lista_ordenada(head_H);
-    lista_nao_ordenadar(head_Hl);
+   do{
+        fscanf(file,"%.2f",&read);
 
+        if(cont == 0){
+            head_H = no(read,NULL);
+            head_Hl = no(read,NULL);
+            cont++;
+        }else{
+            lista_inserir_no_ordenado(head_H,no(read,NULL));
+        }
+   }while(!EOF);
+   
+    fclose(file);
+    Lista_imprimir(head_H);
+    printf("\n");
+    Lista_imprimir(head_Hl);
    return 0; 
-}
+} 
