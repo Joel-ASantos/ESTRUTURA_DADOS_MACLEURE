@@ -31,8 +31,8 @@ void hash_table_put(char* chave, char* dado){
 int hash_table_contains(char* chave){
     int id = hash_code(chave);
 
-    while(strcmp(chave,Hash_Table[id]) == 0){
-        if(id == Hash_Table[id]){
+    while(Hash_Table[id] != NULL){
+        if(strcmp(chave,Hash_Table[id]) == 0){
             printf("Contem!");
             return 1;
         }else{
