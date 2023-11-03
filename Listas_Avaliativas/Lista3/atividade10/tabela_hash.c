@@ -20,10 +20,10 @@ char* hash_table_get(char* chave){
 }
 
 void hash_table_put(char* chave, char* dado){
-    int id = hash_code(dado);
+    int id = hash_code(chave);
 
     while(Hash_Table[id] != NULL){
-        id = hash_code(id+1) % TAM;
+        id = hash_code(id + 1) % TAM;
     }
     Hash_Table[id] = dado;
 }
@@ -36,7 +36,7 @@ int hash_table_contains(char* chave){
             printf("Contem!");
             return 1;
         }else{
-            id = hash_code(id+1) % TAM;
+            id = hash_code(id + 1) % TAM;
         }
     }
     printf("Nao Contem!");
@@ -48,10 +48,10 @@ void hash_table_remove(char* chave){
 
     while(Hash_Table[id] != NULL){
         if(strcmp(chave,Hash_Table[id]) == 0){
-            Hash_Table[id] == NULL;
+            Hash_Table[id] = NULL;
             printf("Removido!");
         }else{
-            id = hash_code(id+1) % TAM;
+            id = hash_code(id + 1) % TAM;
         }
     }
 }
