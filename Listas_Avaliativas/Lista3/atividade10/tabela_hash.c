@@ -3,7 +3,7 @@
 #include "tabela_hash.h"
 
 char* hash_table_get(char* chave){
-
+    
 }
 
 void hash_table_put(char* chave, char* dado){
