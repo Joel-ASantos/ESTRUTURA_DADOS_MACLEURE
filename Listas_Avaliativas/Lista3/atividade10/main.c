@@ -5,21 +5,21 @@
 
 int main(int argc,char *argv[]){
     //Imput
-    hash_table_put('1','J');
-    hash_table_put('2','K');
-    hash_table_contains('J');
+    hash_table_put("Teste1","Valor1");
+    hash_table_put("Teste2","Valor2");
+    hash_table_contains("Teste1");
+    
+    /*---------------------GET--------------------*/
+    printf("Get: %s",hash_table_get("Teste1"));
     
     /*---------------------CONTAIN--------------------*/
-    printf("Get: %c",hash_table_get('1'));
-    
-    /*---------------------CONTAIN--------------------*/
-    printf("Contains: %c",hash_table_contains('J'));
-    printf("\nContains: %c",hash_table_contains('K'));
+    printf("\nContains: %s",hash_table_contains("Valor1"));
+    printf("\nContains: %s",hash_table_contains("Valor2"));
 
     /*---------------------REMOVE--------------------*/
-    hash_table_remove('2');
+    hash_table_remove("Teste2");
 
     /*---------------------CONTAIN--------------------*/
-    printf("\nContains: %c",hash_table_contains('K'));
+    printf("\nContains: %s",hash_table_contains("Valor1"));
     exit(0);
 }
