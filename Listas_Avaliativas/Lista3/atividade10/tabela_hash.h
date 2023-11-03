@@ -4,7 +4,7 @@ typedef struct Key{
 }Key;
 
 typedef struct TableHash{
-    struct Key* tabele[];
+    struct Key* tabela[];
 }TableHash;
 
 char* hash_table_get(char* chave);
