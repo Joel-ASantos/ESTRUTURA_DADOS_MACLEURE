@@ -7,9 +7,10 @@ No* no(int valor){
     no->valor = valor;
     no->no_esquerda = NULL;
     no->no_direita = NULL;
+    return no;
 }
 
-void ab_inserir_no(No* raiz,int valor){
+void ab_inserir_no(No** raiz,int valor){
     if(raiz == NULL){
         (*raiz) = no(valor);
     }else{
